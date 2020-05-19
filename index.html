@@ -8,12 +8,13 @@
     <title>My Library</title>
     <link rel="stylesheet" href="style.css">
     <script src="app.js" defer></script>
+    <script src="https://kit.fontawesome.com/263d4f855d.js" crossorigin="anonymous"></script>
   </head>
 
   <body>
    
     <div class="container">
-        <h1 class="pb-2 mt-4 mb-2">My Library</h1>
+      <h1 class="pb-2  mt-4 mb-2"><span class="pr-3"><i class="fas fa-book"></i></span>My Library</h1>
         <hr>
         <button class="btn btn-secondary" id="create-book-btn">Add New Book</button><br><br>
     </div>
@@ -23,26 +24,30 @@
             <form>
               <div class="form-group">
                 <label>Title</label>
-                <input type="text" placeholder="Title" class="form-control">
+                <input type="text" id="title" placeholder="Title" class="form-control">
               </div>
               
               <div class="form-group">
                 <label>Author</label>
-                <input type="text" placeholder="Author" class="form-control">
+                <input type="text" id="author" placeholder="Author" class="form-control">
               </div>
               
               <div class="form-group">
                 <label>Page Count</label>
-                <input class="form-control" placeholder="Page Count"></input>
+                <input class="form-control" id="page-count" placeholder="Page Count"></input>
               </div>
     
               <input type="checkbox" id="form-checkbox" name="form-checkbox">
               <label for="form-checkbox">Read?</label><br>
-              <button class="btn btn-secondary float-left" id="submit-form-btn">Add To Library</button>
+              <button type="submit" class="btn btn-secondary float-left" id="submit-form-btn">Add To Library</button>
               <button class="btn btn-secondary float-right" id="close-form-btn">Close</button>
               <div class="clearfix"></div>
               </form>
     </div>
+</div>
+
+<div id="books" class="container individual-books">
+
 </div>
 
    

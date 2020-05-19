@@ -21,3 +21,25 @@ body{background-color: oldlace;}
   width: 80%; /* Could be more or less, depending on screen size */
 }
 
+.book-tile {
+  border: 3px solid black;
+  width: 9em;
+  height: 12em;
+  padding: 2em;
+  text-align: center;
+  background: saddlebrown;
+  color: gold;
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.1);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.1);
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.1);
+}
+
+/*.individual-books {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: space-between;
+  border: 10px solid grey;
+  width: 70%;
+}*/
+
