@@ -2,6 +2,7 @@ let modal = document.getElementById('modal')
 let createBookBtn = document.getElementById('create-book-btn')
 let library = []
 let books = document.getElementById('books')
+let submitBtn = document.getElementById('submit-form-btn')
 
 class Book {
     constructor(title,author,pageCount) {
@@ -17,9 +18,18 @@ function addBook(e) {
     let title = document.getElementById('title').value
     let author = document.getElementById('author').value
     let pages = document.getElementById('page-count').value
-    let thisBook = new Book(title, author, pages)
-    library.push(thisBook)
-    render(thisBook)
+    if(title === "" || author === "" || pages==="") {
+        alert("all fields required.")
+    }
+    else {
+        let thisBook = new Book(title, author, pages)
+        library.push(thisBook)
+        render(thisBook)
+        modal.style.display = "none;"
+        document.getElementById("myForm").reset();
+    }
+    
+    
     
 
 }
@@ -46,3 +56,11 @@ createBookBtn.onclick = () => {
     modal.style.display = "block"
 }
 
+
+submitBtn.addEventListener('click',addBook)
+
+window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
