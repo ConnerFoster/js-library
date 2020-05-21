@@ -1,4 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@700;900&display=swap');
 body{background-color: oldlace;}
+
 
 .form-modal{
   display: none; /* Hidden by default */
@@ -23,15 +25,20 @@ body{background-color: oldlace;}
 
 .book-tile {
   border: 3px solid black;
-  width: 11em;
-  height: 14em;
-  padding: 2em;
+  width: 12em;
+  height: 15em;
+  padding: 1em;
   text-align: center;
   background: saddlebrown;
   color: gold;
   -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.1);
   -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.1);
   box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.1);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-family: 'Playfair Display SC', serif;
+  font-size: 1em;
+  
 }
 
 .individual-books {
@@ -45,11 +52,16 @@ body{background-color: oldlace;}
 }
 
 .delete-btn {
-  transform: scale(.9);
+  transform: scale(.8);
+  padding-top: 2em;
 }
+
 
 .book-tile-div {
     display: inline-flex;
     padding-right: 1em;
+    
 }
+
+
 

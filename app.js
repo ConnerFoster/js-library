@@ -36,21 +36,60 @@ class UI {
         <p>${book.title}</p>
         <p>${book.author}</p>
         <p>${book.pageCount}</p>
-        <a href="#" class="btn btn-danger btn-sm">X</a>
+        <div class="delete-btn">
+        <a href="#" class="btn btn-danger btn-sm" style="font-family: Helvetica;" >X</a>
         </div>
         `;
 
         list.appendChild(bookTileDiv);
     }
+    static clearFields() {
+        document.getElementById("myForm").reset();
+    }
 }
 //Store Class: Handles Storage
 
 //Event: Display Books
-
-//Event: Add a Book
 document.addEventListener('DOMContentLoaded', UI.displayBooks);
+//Event: Add a Book
+document.querySelector('#myForm').addEventListener('submit', (e)=> {
+    //prevent actual form submit
+    e.preventDefault();
+    //get form values
+    const title = document.querySelector('#title').value;
+    const author = document.querySelector('#author').value;
+    const pageCount = document.querySelector('#page-count').value;
+    const book = new Book(title, author, pageCount);
+
+    //add book to UI
+    UI.addBookToList(book);
+    //clear fields
+    UI.clearFields()
+
+}
+)
 //Event: Remove a Book
 
+
+
+const modal = document.querySelector('#modal');
+
+//show form when user clicks add new book
+document.querySelector('#create-book-btn').addEventListener('click', () => {
+    modal.style.display = "block";
+})
+
+document.querySelector('#close-form-btn').addEventListener('click', () => {
+    modal.style.display = "none";
+})
+
+
+//when user clicks on screen away from modal it goes away
+window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
 
 
 
