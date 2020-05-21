@@ -23,8 +23,8 @@ body{background-color: oldlace;}
 
 .book-tile {
   border: 3px solid black;
-  width: 9em;
-  height: 12em;
+  width: 11em;
+  height: 14em;
   padding: 2em;
   text-align: center;
   background: saddlebrown;
@@ -45,6 +45,11 @@ body{background-color: oldlace;}
 }
 
 .delete-btn {
-  transform: scale(.7);
+  transform: scale(.9);
+}
+
+.book-tile-div {
+    display: inline-flex;
+    padding-right: 1em;
 }
 

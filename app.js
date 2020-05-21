@@ -1,4 +1,55 @@
+// Book Class: Represents a Book
+class Book {
+    constructor(title, author, pageCount) {
+        this.title = title;
+        this.author = author;
+        this.pageCount = pageCount;
+    }
+}
+//UI Class: Handle UI Tasks
+class UI {
+    static displayBooks() {
+        const StoredBooks = [
+            {
+                title: 'The Origin of Species',
+                author: 'John Doe',
+                pageCount: 300
+            },
+            {
+                title: 'Book Two',
+                author: 'Jane Doe',
+                pageCount: 430
+            }
+        ];
+        const books = StoredBooks;
 
+        books.forEach((book)=> UI.addBookToList(book));
+    }
+    static addBookToList(book) {
+        const list = document.querySelector('#individual-books');
+
+        const bookTileDiv= document.createElement('div');
+        bookTileDiv.classList.add('book-tile-div')
+
+        bookTileDiv.innerHTML = `
+        <div class="book-tile">
+        <p>${book.title}</p>
+        <p>${book.author}</p>
+        <p>${book.pageCount}</p>
+        <a href="#" class="btn btn-danger btn-sm">X</a>
+        </div>
+        `;
+
+        list.appendChild(bookTileDiv);
+    }
+}
+//Store Class: Handles Storage
+
+//Event: Display Books
+
+//Event: Add a Book
+document.addEventListener('DOMContentLoaded', UI.displayBooks);
+//Event: Remove a Book
 
 
 
