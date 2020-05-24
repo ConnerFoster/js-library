@@ -34,10 +34,11 @@ body{background-color: oldlace;}
   -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.1);
   -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.1);
   box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.1);
-  overflow: hidden;
+  overflow-x: hidden;
   text-overflow: ellipsis;
   font-family: 'Playfair Display SC', serif;
-  font-size: 1em;
+  font-size: 1.2em;
+  font-weight: 900;
   
 }
 
@@ -54,12 +55,14 @@ body{background-color: oldlace;}
 .delete-btn {
   transform: scale(.8);
   padding-top: 2em;
+  
 }
 
 
 .book-tile-div {
     display: inline-flex;
     padding-right: 1em;
+    margin-top: 2em;
     
 }
 
