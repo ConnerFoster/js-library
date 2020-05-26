@@ -34,7 +34,7 @@ body{background-color: oldlace;}
   -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.1);
   -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.1);
   box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.1);
-  overflow-x: hidden;
+  overflow: hidden;
   text-overflow: ellipsis;
   font-family: 'Playfair Display SC', serif;
   font-size: 1.2em;
